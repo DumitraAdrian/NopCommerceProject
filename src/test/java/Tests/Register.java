@@ -27,7 +27,7 @@ public class Register extends Hooks {
 //        JavascriptExecutor jse = (JavascriptExecutor) driver;
 //        jse.executeScript("window.scrollBy(0,450)");
 
-        RegisterObject registerObject=new RegisterObject(testData);
+//        RegisterObject registerObject=new RegisterObject(testData);
 
         HomePage homePage=new HomePage(getDriver());
         homePage.clickHomePageRegister();
