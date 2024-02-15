@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name = "Smoke Testing Suite">
+    <test name = "Smoke Tests" thread-count="3" parallel = "classes">
+        <classes>
+            <class name="Tests.Register"/>
+            <class name="Tests.Login"/>
+            <class name="Tests.GiftCards"/>
+            <class name="Tests.ElectronicsOthers"/>
+            <class name="Tests.ElectronicsCellphones"/>
+            <class name="Tests.ElectronicsCameraAndPhoto"/>
+            <class name="Tests.ComputersSoftware"/>
+            <class name="Tests.ComputersNotebooks"/>
+            <class name="Tests.ComputersDesktops"/>
+            <class name="Tests.Books"/>
+            <class name="Tests.ApparelShoes"/>
+            <class name="Tests.ApparelClothing"/>
+            <class name="Tests.ApparelAccessories"/>
+
+        </classes>
+    </test>
+</suite>
