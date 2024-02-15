@@ -8,11 +8,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class CameraAndPhotoPage extends BasePage {
-//        public WebDriver driver;
-//
-//    public CameraAndPhotoPage(WebDriver driver) {
-//        this.driver = driver;
-//        PageFactory.initElements(driver, this);
 public CameraAndPhotoPage(WebDriver driver) {
     super(driver);
 }

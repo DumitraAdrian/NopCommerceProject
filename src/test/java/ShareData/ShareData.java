@@ -12,7 +12,7 @@ import java.time.Duration;
 public class ShareData {
 
    public WebDriver driver;
-    //    @BeforeMethod // Se va executa o preconditie inaintea testului efectiv
+
     public void setup(){
 
         EdgeOptions options = new EdgeOptions();
@@ -21,25 +21,14 @@ public class ShareData {
 
         driver.get("https://demo.nopcommerce.com/");
         driver.manage().window().maximize();
-
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-//        JavascriptExecutor jse = (JavascriptExecutor) driver;
-//        jse.executeScript("window.scrollBy(0,450)");
-
-
 
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("window.scrollBy(0,450)");
-
-
     }
-    //    @AfterMethod //post conditii- inchide driver-ul respectiv
     public void clear(){
         driver.quit();
-
-
-   }
+    }
     public WebDriver getDriver() {
        return driver;
     }

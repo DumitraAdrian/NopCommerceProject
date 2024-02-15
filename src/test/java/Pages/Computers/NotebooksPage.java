@@ -8,13 +8,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class NotebooksPage extends BasePage {
-//        public WebDriver driver;
-//
-//    public NotebooksPage(WebDriver driver) {
-//        this.driver = driver;
-//        PageFactory.initElements(driver, this);
-//
-//    }
 public NotebooksPage(WebDriver driver) {
     super(driver);
 }

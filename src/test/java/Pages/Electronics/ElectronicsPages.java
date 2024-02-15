@@ -8,10 +8,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ElectronicsPages extends BasePage {
-//        public WebDriver driver;
-//
-//   ;
-//        PageFactory.initElements(driver, this);
 public ElectronicsPages(WebDriver driver) {
     super(driver);
 }
@@ -22,13 +18,11 @@ public ElectronicsPages(WebDriver driver) {
     public WebElement CellPhones;
     @FindBy(linkText = "Others")
     public WebElement Others;
-
     public void clickOnCameraAndPhoto(){
 //        CameraAndPhoto.click();
         electronicsMethods.clickElectronics(CameraAndPhoto);
         LoggerUtility.info("The user click  Camera And Photo ");
-    }
-    public void clickCellPhones(){
+    }public void clickCellPhones(){
 //        CellPhones.click();
         electronicsMethods.clickElectronics(CellPhones);
         LoggerUtility.info("The user click  Cell Phones ");

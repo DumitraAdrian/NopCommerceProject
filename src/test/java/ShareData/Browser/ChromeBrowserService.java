@@ -9,26 +9,18 @@ import java.util.HashMap;
 
 public class ChromeBrowserService extends BaseBrowserService implements BrowserService{
     private WebDriver driver;
-
     @Override
     public void openBrowser(Boolean cicd) {
         ChromeOptions chromeOptions= (ChromeOptions) prepareBrowserOption(cicd);
         driver = new ChromeDriver(chromeOptions);
         driver.get(getBrowserOptions().get("url"));
         driver.manage().window().maximize();
-
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-
     }
-
     @Override
     public void closeBrowser() {
         driver.quit();
-
-
     }
-
     @Override
     public Object prepareBrowserOption(Boolean cicd) {
 //        PropertyUtility propertyUtility = new PropertyUtility("Browser");
@@ -46,9 +38,7 @@ public class ChromeBrowserService extends BaseBrowserService implements BrowserS
         chromeOptions.addArguments(testData.get("sandbox"));
         chromeOptions.addArguments(testData.get("resolution"));
         return chromeOptions;
-
     }
-
     public WebDriver getDriver() {
         return driver;
     }

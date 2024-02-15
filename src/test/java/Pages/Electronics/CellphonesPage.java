@@ -7,13 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class CellphonesPage extends BasePage {
-//        public WebDriver driver;
-//
-//    public CellphonesPage(WebDriver driver) {
-//        this.driver = driver;
-//        PageFactory.initElements(driver, this);
-//
-//    }
 public CellphonesPage(WebDriver driver) {
     super(driver);
 }

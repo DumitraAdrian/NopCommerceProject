@@ -14,7 +14,6 @@ public class SoftwarePage extends BasePage {
     public WebElement Windwos;
     @FindBy(css = "button[id='add-to-cart-button-11']")
     public WebElement AddToCartWindows;
-
     public void interractClickWindows(){
 //        Windwos.click();
         computersMethods.clickElement(Windwos);

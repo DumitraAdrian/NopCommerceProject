@@ -12,7 +12,6 @@ import java.util.HashMap;
 public class Hooks extends ShareData {
     public HashMap<String, String> testData;
     public String testName;
-
     @BeforeMethod
     public void prepareEnviroment() {
        setup();
@@ -20,12 +19,7 @@ public class Hooks extends ShareData {
         PropertyUtility propertyUtility = new PropertyUtility(testName);
         testData = propertyUtility.getAlldata();
         LoggerUtility.startTestCase(testName);
-
-
     }
-
-
-
     @AfterMethod
     public void clearEnviroment(ITestResult result) {
         if (result.getStatus() == ITestResult.FAILURE) {
@@ -33,14 +27,10 @@ public class Hooks extends ShareData {
         } else {
             clear();
             LoggerUtility.endTestCase(testName);
-
-            // adaugam un listener pe statusul testului
         }
-
-        }
+    }
     @AfterSuite
     public void finishArtifacts(){
         LoggerUtility.mergeLogsInToOne();
     }
-
 }

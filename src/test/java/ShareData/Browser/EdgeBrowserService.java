@@ -8,7 +8,6 @@ import java.time.Duration;
 import java.util.HashMap;
 
 public class EdgeBrowserService  extends BaseBrowserService implements BrowserService {
-
     private WebDriver driver;
     @Override
     public void openBrowser(Boolean cicd) {
@@ -16,20 +15,14 @@ public class EdgeBrowserService  extends BaseBrowserService implements BrowserSe
         driver = new EdgeDriver(edgeOptions);
         driver.get(getBrowserOptions().get("url"));
         driver.manage().window().maximize();
-
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
     }
-
     @Override
     public void closeBrowser() {
         driver.quit();
-
     }
-
     @Override
     public Object prepareBrowserOption(Boolean cicd) {
-//        PropertyUtility propertyUtility = new PropertyUtility("Browser");
         HashMap<String,String> testData = getBrowserOptions();
         EdgeOptions edgeOptions=new EdgeOptions();
         if (cicd){
@@ -45,7 +38,6 @@ public class EdgeBrowserService  extends BaseBrowserService implements BrowserSe
         edgeOptions.addArguments(testData.get("resolution"));
         return edgeOptions;
     }
-
     public WebDriver getDriver() {
         return driver;
     }
