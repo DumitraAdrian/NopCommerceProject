@@ -9,9 +9,9 @@ import org.testng.Assert;
 
 import java.time.Duration;
 
-public class LoginMethods {
+public class ElementMethods {
     private WebDriver driver;
-    public LoginMethods(WebDriver driver){
+    public ElementMethods(WebDriver driver){
         this.driver=driver;
     }
     public void WaitVisibleElement(WebElement element){
@@ -41,4 +41,3 @@ public class LoginMethods {
         Assert.assertEquals(actualMessege,value);
     }
 }
-

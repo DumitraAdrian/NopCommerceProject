@@ -11,10 +11,9 @@ public class ClothingPage extends BasePage {
         super(driver);
     }
     @FindBy(css = "a[href='/levis-511-jeans']")
-    public WebElement Jeans;
+    private WebElement Jeans;
     @FindBy(css = "button[id='add-to-cart-button-30']")
-    public WebElement AddToCartJeans;
-
+    private WebElement AddToCartJeans;
     public void interractClickJeans(){
         apparelMethods.clickElement(Jeans);
         LoggerUtility.info("The user click Jeans");

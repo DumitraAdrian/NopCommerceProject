@@ -11,10 +11,9 @@ public class BooksPage extends BasePage {
         super(driver);
     }
     @FindBy(css = "a[href='/pride-and-prejudice']")
-    public WebElement PrideAndPrejudice;
+    private WebElement PrideAndPrejudice;
     @FindBy(css = "button[id='add-to-cart-button-39']")
-    public WebElement AddToCartBook;
-
+    private WebElement AddToCartBook;
     public void interractClickPrideAndPrejudice(){
         booksMethods.clickElement(PrideAndPrejudice);
         LoggerUtility.info("The user click Pride And Prejudice book");

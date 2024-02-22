@@ -13,11 +13,11 @@ public ElectronicsPages(WebDriver driver) {
 }
 
     @FindBy(linkText = "Camera & photo")
-    public WebElement CameraAndPhoto;
+    private WebElement CameraAndPhoto;
     @FindBy(linkText = "Cell phones")
-    public WebElement CellPhones;
+    private WebElement CellPhones;
     @FindBy(linkText = "Others")
-    public WebElement Others;
+    private WebElement Others;
     public void clickOnCameraAndPhoto(){
 //        CameraAndPhoto.click();
         electronicsMethods.clickElectronics(CameraAndPhoto);

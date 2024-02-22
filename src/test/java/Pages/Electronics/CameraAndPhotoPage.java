@@ -13,10 +13,9 @@ public CameraAndPhotoPage(WebDriver driver) {
 }
 
     @FindBy(css = "a[href='/leica-t-mirrorless-digital-camera']")
-    public WebElement LeicaDigitalCamera;
+    private WebElement LeicaDigitalCamera;
     @FindBy(css = "button[id='add-to-cart-button-16']")
-    public WebElement AddToCartLeicaDigitalCamera;
-
+    private WebElement AddToCartLeicaDigitalCamera;
     public void interractClickLeicaDigitalCamera(){
         electronicsMethods.clickElectronics(LeicaDigitalCamera);
         LoggerUtility.info("The user click Leica Digital Camera ");

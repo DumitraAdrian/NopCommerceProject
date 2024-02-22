@@ -11,10 +11,9 @@ public class AccessoriesPage extends BasePage {
         super(driver);
     }
     @FindBy(css = "a[href='/ray-ban-aviator-sunglasses']")
-    public WebElement Sunglass;
+    private WebElement Sunglass;
     @FindBy(css = "button[id='add-to-cart-button-33']")
-    public  WebElement AddToCartSunglass;
-
+    private  WebElement AddToCartSunglass;
     public void InterractClickSunglass(){
         apparelMethods.clickElement(Sunglass);
         LoggerUtility.info("The user click Sunglass");

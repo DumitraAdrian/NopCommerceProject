@@ -11,10 +11,9 @@ public class DesktopsPage extends BasePage {
         super(driver);
     }
    @FindBy(css = "a[href='/digital-storm-vanquish-3-custom-performance-pc']")
-    public WebElement DigitalCustomPerformancePC;
+   private WebElement DigitalCustomPerformancePC;
     @FindBy(css = "button[id='add-to-cart-button-2']")
-    public  WebElement AddToCartPc;
-
+    private  WebElement AddToCartPc;
     public void interractClickDigitalCustomPerformancePC(){
 //        DigitalCustomPerformancePC.click();
         computersMethods.clickElement(DigitalCustomPerformancePC);

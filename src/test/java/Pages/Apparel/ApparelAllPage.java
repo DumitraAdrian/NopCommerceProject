@@ -11,11 +11,11 @@ public class ApparelAllPage extends BasePage {
         super(driver);
     }
     @FindBy(linkText = "Accessories")
-    public WebElement Accessories;
+    private WebElement Accessories;
     @FindBy(linkText = "Clothing")
-    public WebElement Clothing;
+    private WebElement Clothing;
     @FindBy(linkText = "Shoes")
-    public WebElement Shoes;
+    private WebElement Shoes;
     public void clickAccessories(){
         apparelMethods.clickElement(Accessories);
         LoggerUtility.info("The user click Accessories");

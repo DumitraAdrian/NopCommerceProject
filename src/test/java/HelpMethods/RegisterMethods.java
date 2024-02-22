@@ -34,6 +34,7 @@ public class RegisterMethods {
         element.sendKeys(keyboardPress);
 
     }
+
 }
 
 

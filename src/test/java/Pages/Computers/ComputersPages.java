@@ -11,12 +11,11 @@ public class ComputersPages extends BasePage {
         super(driver);
     }
     @FindBy(linkText = "Desktops")
-    public WebElement Desktops;
+    private WebElement Desktops;
     @FindBy(linkText = "Notebooks")
-    public WebElement Notebooks;
+    private WebElement Notebooks;
     @FindBy(linkText = "Software")
-    public  WebElement Software;
-
+    private  WebElement Software;
     public void clickDesktops(){
         computersMethods.clickElement(Desktops);
         LoggerUtility.info("The user click Desktops");

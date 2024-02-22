@@ -11,12 +11,11 @@ public class ShoesPage extends BasePage {
         super(driver);
     }
     @FindBy(css = "a[href='/nike-floral-roshe-customized-running-shoes']")
-    public WebElement Nike;
+    private WebElement Nike;
     @FindBy(css = "select[id='product_attribute_6']")
-    public  WebElement SelectSize;
+    private  WebElement SelectSize;
     @FindBy(css = "button[id='add-to-cart-button-24']")
-    public WebElement AddToCartNike;
-
+    private WebElement AddToCartNike;
     public void interractClickNike(){
         apparelMethods.clickElement(Nike);
         LoggerUtility.info("The user click Nike");

@@ -13,13 +13,13 @@ public class GiftCardsPage extends BasePage {
         super(driver);
     }
     @FindBy(css = "a[href='/100-physical-gift-card']")
-    public WebElement Card;
+    private WebElement Card;
     @FindBy(css = "input[class='recipient-name']")
-    public  WebElement RecipientName;
+    private  WebElement RecipientName;
     @FindBy(css = "input[class='sender-name']")
-    public WebElement YourName;
+    private WebElement YourName;
     @FindBy(css = "button[id='add-to-cart-button-45']")
-    public WebElement AddToCartCard;
+    private WebElement AddToCartCard;
     public void interractGiftCards(GiftCardObject giftCardObject) {
         interractClickCard();
         interractRecipientName(giftCardObject.getRecipientName());
@@ -31,7 +31,6 @@ public class GiftCardsPage extends BasePage {
         Card.click();
         LoggerUtility.info("The user click card");
     }
-
     public void interractRecipientName(String RecipientNameValue){
 //        RecipientName.sendKeys(RecipientNamevalue);
 ////        elementsMethods.fillElement(email,emailValue);

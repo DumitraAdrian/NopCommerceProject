@@ -12,14 +12,13 @@ public NotebooksPage(WebDriver driver) {
     super(driver);
 }
     @FindBy(css = "a[href='/apple-macbook-pro-13-inch']")
-    public WebElement AppleMacBook;
+    private WebElement AppleMacBook;
     @FindBy(css = "button[id='add-to-cart-button-4']")
-    public WebElement AddToCartApple;
+    private WebElement AddToCartApple;
     @FindBy(css = "a[href='/asus-n551jk-xo076h-laptop']")
-    public WebElement AsusLaptop;
+    private WebElement AsusLaptop;
     @FindBy(css = "button[id='add-to-cart-button-5']")
-    public   WebElement AddToCartAsus;
-
+    private    WebElement AddToCartAsus;
     public void interractClickAppleMacBook(){
 //        AppleMacBook.click();
         computersMethods.clickElement(AppleMacBook);

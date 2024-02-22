@@ -11,9 +11,9 @@ public class SoftwarePage extends BasePage {
         super(driver);
     }
     @FindBy(css = "a[href='/windows-8-pro']")
-    public WebElement Windwos;
+    private WebElement Windwos;
     @FindBy(css = "button[id='add-to-cart-button-11']")
-    public WebElement AddToCartWindows;
+    private WebElement AddToCartWindows;
     public void interractClickWindows(){
 //        Windwos.click();
         computersMethods.clickElement(Windwos);

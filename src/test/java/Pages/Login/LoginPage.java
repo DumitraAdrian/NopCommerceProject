@@ -1,26 +1,23 @@
 package Pages.Login;
-import HelpMethods.LoginMethods;
 import Logger.LoggerUtility;
-import ObjectData.GiftCardObject;
 import ObjectData.LoginObject;
 import Pages.Forms.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends BasePage {
     public LoginPage(WebDriver driver) {
         super(driver);
     }
     @FindBy(css = "input[id='Email']")
-    public WebElement Email;
+    private WebElement Email;
     @FindBy(css = "input[id='Password']")
-    public WebElement Password;
+    private WebElement Password;
     @FindBy(css = "input[id='RememberMe']")
-    public  WebElement RememberMe;
+    private  WebElement RememberMe;
     @FindBy(css = "button[class='button-1 login-button']")
-    public  WebElement Login;
+    private  WebElement Login;
     public void interractLoginPage(LoginObject loginObject) {
         interractEmail(loginObject.getEmail());
         interractPassword(loginObject.getPassword());
@@ -28,10 +25,11 @@ public class LoginPage extends BasePage {
         interractClickLogIn();
 
     }
-    public void interractEmail(String EmeilValue){
+    public boolean interractEmail(String EmailValue){
 //        Email.sendKeys(value);
-        loginMethods.fillElement(Email,EmeilValue);
-        LoggerUtility.info("The user type email" +EmeilValue);
+        loginMethods.fillElement(Email,EmailValue);
+        LoggerUtility.info("The user type email");
+        return false;
     }
     public void interractPassword(String PasswordValue){
         loginMethods.fillElement(Password,PasswordValue);

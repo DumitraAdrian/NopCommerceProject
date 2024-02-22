@@ -8,21 +8,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class OthersPage extends BasePage {
-//        public WebDriver driver;
-//
-//    public OthersPage(WebDriver driver) {
-//        this.driver = driver;
-//        PageFactory.initElements(driver,this);
-//
-//    }
+
 public OthersPage(WebDriver driver) {
     super(driver);
 }
     @FindBy(css = "a[href='/portable-sound-speakers']")
-    public WebElement PortableSoundSpeakers;
+    private WebElement PortableSoundSpeakers;
     @FindBy(css = "button[id='add-to-cart-button-23']")
-    public WebElement AddToCartPortableSoundSpeakers;
-
+    private WebElement AddToCartPortableSoundSpeakers;
     public void interractClickPortableSoundSpeakers(){
 //        PortableSoundSpeakers.click();
         electronicsMethods.clickElectronics(PortableSoundSpeakers);

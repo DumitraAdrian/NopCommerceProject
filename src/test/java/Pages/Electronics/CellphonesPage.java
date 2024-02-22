@@ -11,10 +11,9 @@ public CellphonesPage(WebDriver driver) {
     super(driver);
 }
     @FindBy(css = "a[href='/htc-one-m8-android-l-50-lollipop']")
-    public WebElement HtcPhone;
+    private WebElement HtcPhone;
     @FindBy(css = "button[id='add-to-cart-button-18']")
-    public  WebElement AddToCartHtcPhone;
-
+    private  WebElement AddToCartHtcPhone;
     public void interractClickHtcPhone(){
         electronicsMethods.clickElectronics(HtcPhone);
 //        HtcPhone.click();
